@@ -1,10 +1,9 @@
 name: Simple CI Example
 
-# Definindo o evento que irá acionar o workflow
 on:
   push:
     branches:
-      - main  # Ou qualquer outra branch que você queira monitorar
+      - main
 
 jobs:
   build:
@@ -15,4 +14,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Echo message after push
-        run: echo "Push realizado com sucesso!"  # Mensagem de sucesso após o push
+        run: echo "✅ Push realizado com sucesso!"
