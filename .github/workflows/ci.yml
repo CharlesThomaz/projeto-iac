@@ -1,0 +1,18 @@
+name: Simple CI Example
+
+# Definindo o evento que irá acionar o workflow
+on:
+  push:
+    branches:
+      - main  # Ou qualquer outra branch que você queira monitorar
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Echo message after push
+        run: echo "Push realizado com sucesso!"  # Mensagem de sucesso após o push
